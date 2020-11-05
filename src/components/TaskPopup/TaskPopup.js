@@ -17,13 +17,7 @@ function TaskPopup(props) {
     const localTasks = localStorage.getItem('tasks');
 
     if (localTasks) {
-      console.log(localTasks);
-      
       const parsedTasks = JSON.parse(localTasks);
-
-      console.log(parsedTasks);
-      console.log(parsedTasks[deskIndex][taskIndex].description);
-      console.log(parsedTasks[deskIndex][taskIndex].description !== undefined);
 
       if (parsedTasks[deskIndex][taskIndex].description) {
         setTaskDescription(parsedTasks[props.index][props.taskData.index].description)
